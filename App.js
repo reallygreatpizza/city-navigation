@@ -20,7 +20,7 @@ const willisPic = require('./assets/willis.png');
 function HomeScreen({navigation}) {
   return (
     <View style={styles.mainContainer}>
-      <Image source={artPic}/>
+      <Image source={artPic} style={styles.Image}/>
     </View>
   );
 }
@@ -28,7 +28,7 @@ function HomeScreen({navigation}) {
 function MileScreen({navigation}) {
   return (
     <View style={styles.mainContainer}>
-      <Image source={milePic}/>
+      <Image source={milePic} style={styles.Image}/>
     </View>
   );
 }
@@ -36,7 +36,7 @@ function MileScreen({navigation}) {
 function PierScreen({navigation}) {
   return (
     <View style={styles.mainContainer}>
-      <Image source={pierPic}/>
+      <Image source={pierPic} style={styles.Image}/>
     </View>
   );
 }
@@ -44,7 +44,7 @@ function PierScreen({navigation}) {
 function WaterScreen({navigation}) {
   return (
     <View style={styles.mainContainer}>
-      <Image source={waterPic}/>
+      <Image source={waterPic} style={styles.Image}/>
     </View>
   );
 }
@@ -52,7 +52,7 @@ function WaterScreen({navigation}) {
 function WillisScreen({navigation}) {
   return (
     <View style={styles.mainContainer}>
-      <Image source={willisPic}/>
+      <Image source={willisPic} style={styles.Image}/>
     </View>
   );
 }
@@ -99,10 +99,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   Image: {
-    fontColor: '#c4c3d0',
-    fontSize: 20,
-    alignItems: 'center', 
-    justifyContent: 'center',
+    height: 480,
+    width: 320
   },
 });
 
