@@ -13,6 +13,7 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import * as SplashScreen from 'expo-splash-screen';
 import * as WebBrowser from 'expo-web-browser';
 
+//comment because git is being weird and I need to force a change to get a new commit
 
 SplashScreen.preventAutoHideAsync();
 setTimeout(SplashScreen.hideAsync, 5000);
