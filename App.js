@@ -6,10 +6,17 @@ import {
   View,
   Image,
   Text,
+  Button
 } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
+import * as SplashScreen from 'expo-splash-screen';
+import * as WebBrowser from 'expo-web-browser';
+
+
+SplashScreen.preventAutoHideAsync();
+setTimeout(SplashScreen.hideAsync, 5000);
+
 
 const artPic = require('./assets/art.png');
 const milePic = require('./assets/mile.png');
@@ -17,10 +24,20 @@ const pierPic = require('./assets/pier.png');
 const waterPic = require('./assets/water.png');
 const willisPic = require('./assets/willis.png');
 
+function handleButtonPress(url) {
+    WebBrowser.openBrowserAsync(url);
+    };
+  
+
 function HomeScreen({navigation}) {
   return (
     <View style={styles.mainContainer}>
       <Image source={artPic} style={styles.Image}/>
+      <Button
+        onPress={() => handleButtonPress("https://www.artic.edu/ ")}
+        title={'More Information'}
+        style = {styles.button}
+      />
     </View>
   );
 }
@@ -29,14 +46,27 @@ function MileScreen({navigation}) {
   return (
     <View style={styles.mainContainer}>
       <Image source={milePic} style={styles.Image}/>
+      <Button
+        onPress={() => handleButtonPress("https://www.themagnificentmile.com/")}
+        title={'More Information'}
+        style = {styles.button}
+      />
+
     </View>
+    
   );
 }
 
 function PierScreen({navigation}) {
+  var url = "https://navypier.org/";
   return (
     <View style={styles.mainContainer}>
       <Image source={pierPic} style={styles.Image}/>
+      <Button
+        onPress={() => handleButtonPress("https://navypier.org/")}
+        title={'More Information'}
+        style = {styles.button}
+      />
     </View>
   );
 }
@@ -45,6 +75,11 @@ function WaterScreen({navigation}) {
   return (
     <View style={styles.mainContainer}>
       <Image source={waterPic} style={styles.Image}/>
+      <Button
+        onPress={() => handleButtonPress("https://www.chicago.gov/city/en/depts/dca/supp_info/city_gallery_in_thehistoricwatertower.html")}
+        title={'More Information'}
+        style = {styles.button}
+      />
     </View>
   );
 }
@@ -53,6 +88,11 @@ function WillisScreen({navigation}) {
   return (
     <View style={styles.mainContainer}>
       <Image source={willisPic} style={styles.Image}/>
+      <Button
+        onPress={() => handleButtonPress("https://www.willistower.com/")}
+        title={'More Information'}
+        style = {styles.button}
+      />
     </View>
   );
 }
@@ -76,9 +116,10 @@ export default function App() {
 
 const styles = StyleSheet.create({
   mainContainer: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        flex: 1,
   },
   title: {
     fontSize: 28,
@@ -101,6 +142,10 @@ const styles = StyleSheet.create({
   Image: {
     height: 480,
     width: 320
+  },
+  button: {
+    marginTop: 10,
+    paddingTop: 10,
   },
 });
 
