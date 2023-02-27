@@ -6,14 +6,13 @@ import {
   View,
   Image,
   Text,
-  Button
 } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import * as SplashScreen from 'expo-splash-screen';
 import * as WebBrowser from 'expo-web-browser';
+import Button from './Button';
 
-//comment because git is being weird and I need to force a change to get a new commit
 
 SplashScreen.preventAutoHideAsync();
 setTimeout(SplashScreen.hideAsync, 5000);
@@ -38,7 +37,7 @@ function HomeScreen({navigation}) {
         onPress={() => handleButtonPress("https://www.artic.edu/ ")}
         title={'More Information'}
         style = {styles.button}
-      />
+      >  More Information</Button>
     </View>
   );
 }
@@ -51,7 +50,7 @@ function MileScreen({navigation}) {
         onPress={() => handleButtonPress("https://www.themagnificentmile.com/")}
         title={'More Information'}
         style = {styles.button}
-      />
+        >  More Information</Button>
 
     </View>
     
@@ -67,7 +66,7 @@ function PierScreen({navigation}) {
         onPress={() => handleButtonPress("https://navypier.org/")}
         title={'More Information'}
         style = {styles.button}
-      />
+        >  More Information</Button>
     </View>
   );
 }
@@ -80,7 +79,7 @@ function WaterScreen({navigation}) {
         onPress={() => handleButtonPress("https://www.chicago.gov/city/en/depts/dca/supp_info/city_gallery_in_thehistoricwatertower.html")}
         title={'More Information'}
         style = {styles.button}
-      />
+        >  More Information</Button>
     </View>
   );
 }
@@ -93,7 +92,7 @@ function WillisScreen({navigation}) {
         onPress={() => handleButtonPress("https://www.willistower.com/")}
         title={'More Information'}
         style = {styles.button}
-      />
+        >  More Information</Button>
     </View>
   );
 }
@@ -145,8 +144,8 @@ const styles = StyleSheet.create({
     width: 320
   },
   button: {
-    marginTop: 10,
-    paddingTop: 10,
+    margin: 10,
+    padding: 10,
   },
 });
 
