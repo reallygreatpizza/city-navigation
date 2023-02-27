@@ -33,7 +33,7 @@ function HomeScreen({navigation}) {
   return (
     <View style={styles.mainContainer}>
       <Image source={artPic} style={styles.Image}/>
-      <Button
+      <Button info
         onPress={() => handleButtonPress("https://www.artic.edu/ ")}
         title={'More Information'}
         style = {styles.button}
@@ -46,7 +46,7 @@ function MileScreen({navigation}) {
   return (
     <View style={styles.mainContainer}>
       <Image source={milePic} style={styles.Image}/>
-      <Button
+      <Button info
         onPress={() => handleButtonPress("https://www.themagnificentmile.com/")}
         title={'More Information'}
         style = {styles.button}
@@ -62,7 +62,7 @@ function PierScreen({navigation}) {
   return (
     <View style={styles.mainContainer}>
       <Image source={pierPic} style={styles.Image}/>
-      <Button
+      <Button info
         onPress={() => handleButtonPress("https://navypier.org/")}
         title={'More Information'}
         style = {styles.button}
@@ -75,7 +75,7 @@ function WaterScreen({navigation}) {
   return (
     <View style={styles.mainContainer}>
       <Image source={waterPic} style={styles.Image}/>
-      <Button
+      <Button info
         onPress={() => handleButtonPress("https://www.chicago.gov/city/en/depts/dca/supp_info/city_gallery_in_thehistoricwatertower.html")}
         title={'More Information'}
         style = {styles.button}
@@ -88,11 +88,10 @@ function WillisScreen({navigation}) {
   return (
     <View style={styles.mainContainer}>
       <Image source={willisPic} style={styles.Image}/>
-      <Button
+      <Button info style = {styles.button}
         onPress={() => handleButtonPress("https://www.willistower.com/")}
         title={'More Information'}
-        style = {styles.button}
-        >  More Information</Button>
+        >More Information</Button>
     </View>
   );
 }
@@ -146,8 +145,8 @@ const styles = StyleSheet.create({
   button: {
     margin: 10,
     padding: 10,
-    backgroundColor: '#00afff',
-    color: '#ffffff',
+    //backgroundColor: '#00afff',
+    //color: '#ffffff',
   },
 });
 
